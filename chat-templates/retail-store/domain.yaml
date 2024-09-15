@@ -1,0 +1,58 @@
+version: '3.1'
+entities:
+- product
+- feature
+- price 
+- availability
+- time
+- location
+- store
+intents:
+  - thank_you
+  - ask_product_info
+  - ask_product_availability
+  - ask_product_price
+  - ask_product_features
+  - ask_store_hours
+  - ask_store_location
+slots:
+  product:
+    type: text
+  store:
+    type: text
+  feature:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: feature
+  availability:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: availability
+  time:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: time
+  location:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: location
+responses:
+  utter_you_are_welcome:
+    - text: "You're welcome!"
+  utter_store_hours:
+    - text: "Our store is open from 9 AM to 9 PM from Monday to Saturday."
+  utter_store_location:
+    - text: "Our store is located at 123 Retail Street, Shopping City."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+  - action_provide_product_info
+  - action_check_product_availability
+  - action_provide_product_price
+  - action_provide_product_features

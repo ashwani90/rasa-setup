@@ -1,0 +1,115 @@
+version: "3.1"
+nlu:
+- intent: ask_course_recommendation
+  examples: |
+    - Can you recommend a course on artificial intelligence?
+    - I'm looking for a course to learn web development. Any recommendations?
+    - What course would you suggest for data science beginners?
+    - Could you recommend a good course for learning Python?
+    - I want to improve my project management skills. Any course recommendations?
+    - Do you have any courses on digital marketing that you would recommend?
+    - I'm interested in learning machine learning. Which course should I take?
+    - Could you suggest a course for learning JavaScript?
+    - What's a good course for beginners in cloud computing?
+    - Can you recommend an advanced course on cybersecurity?
+    - I'm looking for a course to enhance my UX/UI design skills. Any suggestions?
+    - Could you suggest a course on mobile app development?
+    - What courses do you recommend for improving my leadership skills?
+    - I want to learn blockchain technology. Any good courses out there?
+    - Could you recommend a course for learning data visualization?
+    - What's a good course for getting certified in project management?
+    - I'm interested in a course that covers agile methodologies. Any recommendations?
+    - Can you suggest a course that focuses on financial modeling?
+    - I need a course on entrepreneurship. Which one would you recommend?
+    - What course would you recommend for improving my communication skills?
+
+- intent: ask_book_recommendation
+  examples: |
+    - Can you recommend a good fantasy book?
+    - I'm looking for a book on personal development. Any suggestions?
+    - What's a good mystery novel you would recommend?
+    - Could you suggest a book that teaches leadership skills?
+    - I want to read something inspiring. Any recommendations?
+    - Can you recommend a science fiction novel that's not too complex?
+    - I need a book that discusses current trends in technology. Any ideas?
+    - What books do you suggest for learning Python programming?
+    - Could you recommend a classic novel that everyone should read?
+    - I'm interested in historical fiction. Do you have any recommendations?
+    - What's a good book for beginners in philosophy?
+    - Can you suggest a biography of a notable figure?
+    - I'm looking for a book that explores environmental issues. Any suggestions?
+    - Could you recommend a thriller that's fast-paced?
+    - What's a good book for learning about artificial intelligence?
+    - I want to read a book written by a Nobel Prize-winning author. Any recommendations?
+    - Can you suggest a book on mindfulness and meditation?
+    - What books would you recommend for understanding economics?
+    - I need a book that covers the basics of project management. Any ideas?
+
+- intent: ask_course_details
+  examples: |
+    - Can you provide me with details about the Python programming course?
+    - I'm interested in learning more about the data science course. Can you help?
+    - What are the prerequisites for the machine learning course?
+    - Could you tell me the duration of the web development bootcamp?
+    - I want to know the schedule for the JavaScript course. Could you provide details?
+    - What topics are covered in the artificial intelligence course?
+    - Can you give me information about the certification offered in the cybersecurity course?
+    - I heard about a course on digital marketing. What can you tell me about it?
+    - Do you offer any discounts for the project management course?
+    - Can you provide details about the UX/UI design course?
+    - I'm looking for information about the pricing for the blockchain course.
+    - Could you tell me about the instructors for the cloud computing course?
+    - What are the career prospects after completing the data analytics course?
+    - Can you provide a syllabus for the mobile app development course?
+    - I'm curious about the online course on entrepreneurship. What's included?
+    - What are the learning methods used in the finance course?
+    - Could you give me more details about the course on leadership skills?
+    - I'm interested in the course on agile methodologies. What should I expect?
+    - Can you tell me about the hands-on projects in the software engineering course?
+
+
+- intent: ask_book_details
+  examples: |
+    - Can you provide me with details about the book "The Catcher in the Rye"?
+    - I'm interested in learning more about "Harry Potter and the Philosopher's Stone". Can you help?
+    - What is the plot summary of "To Kill a Mockingbird"?
+    - Could you tell me the author of "1984"?
+    - I want to know the genre of "Pride and Prejudice". Can you provide details?
+    - What are the themes explored in "The Great Gatsby"?
+    - Can you give me information about the publication year of "The Hobbit"?
+    - I heard about a book called "The Da Vinci Code". What can you tell me about it?
+    - Do you have any reviews for "The Hunger Games"?
+    - Can you provide details about the illustrator of "Where the Wild Things Are"?
+    - I'm looking for information about the price of "A Game of Thrones".
+    - Could you tell me about the language "One Hundred Years of Solitude" was originally written in?
+    - What are the major characters in "The Lord of the Rings"?
+    - Can you provide a synopsis of "Gone with the Wind"?
+    - I'm curious about the edition of "The Chronicles of Narnia". What's included?
+    - What are the key events in "Moby-Dick"?
+    - Could you give me more details about the series "A Song of Ice and Fire"?
+    - I'm interested in the book on leadership. What should I expect?
+    - Can you tell me about the awards won by "The Book Thief"?
+    - What is the page count of "Dune"?
+
+
+- intent: provide_user_details
+  examples: |
+    - I work as a data scientist in San Francisco.
+    - My profession is software engineering.
+    - I'm a student studying computer science in London.
+    - I'm a UX/UI designer from New York City.
+    - I'm an AI researcher based in Bangalore.
+    - I am a web developer from Sydney, Australia.
+    - I work in cybersecurity at a company in Berlin.
+    - I am a frontend developer interested in machine learning.
+    - My job involves digital marketing in Paris.
+    - I'm a backend engineer focusing on cloud computing.
+    - I'm a project manager working remotely from Tokyo.
+    - I'm a full-stack developer specializing in e-commerce.
+    - I'm a product manager at a tech startup in Amsterdam.
+    - I am a mobile app developer in Toronto.
+    - I am an AI enthusiast studying in Singapore.
+    - I work as a data analyst in Sao Paulo.
+    - I'm a software tester from Manchester.
+    - I am a systems engineer in Kuala Lumpur.
+    - I'm a tech entrepreneur from Silicon Valley.

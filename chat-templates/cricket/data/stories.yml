@@ -1,0 +1,32 @@
+version: "3.1"
+
+stories:
+
+
+- story: Ask Player Details Story
+  steps:
+    - intent: ask_player_details
+      entities:
+        - player_name: "Virat"
+    - action: action_player_details
+    - slot_was_set:
+        - player_name: "Virat"
+
+
+- story: Ask Match Details Story
+  steps:
+    - intent: ask_match_details
+      entities:
+        - match_id: "match-62"
+    - action: action_match_details
+    - slot_was_set:
+        - match_id: "match-62"
+
+- story: Ask Statistics Story
+  steps:
+    - intent: ask_statistics
+      entities:
+        - statistic_type: "runs"
+    - action: action_statistics
+    - slot_was_set:
+        - statistic_type: "runs"

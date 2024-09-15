@@ -1,0 +1,51 @@
+version: '3.1'
+entities:
+  - player_name
+  - match_id
+  - statistic_type
+
+
+intents:
+  - ask_player_details
+  - ask_match_details
+  - ask_statistics
+
+
+slots:
+  player_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: player_name
+      influence_conversation: true
+  match_id:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: match_id
+      influence_conversation: true
+  statistic_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: statistic_type
+      influence_conversation: true
+
+
+responses:
+  utter_ask_player_details:
+    - text: "Please provide the name of the player you are interested in."
+  utter_ask_match_details:
+    - text: "Please provide the match ID you want to know about."
+  utter_ask_statistics:
+    - text: "Please specify the type of statistics you want to know about."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+  - action_player_details
+  - action_match_details
+  - action_statistics
+
+

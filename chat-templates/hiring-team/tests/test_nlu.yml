@@ -1,0 +1,52 @@
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+
+- intent: provide_contact_info
+  examples: |
+    - My contact info is [john.doe@example.com](contact_info)
+    - You can reach me at [john.doe@example.com](contact_info)
+    - Here is my contact info: [john.doe@example.com](contact_info)
+
+- intent: provide_education_details
+  examples: |
+    - I have a degree in [Bachelor of Science in Computer Science](education_details)
+    - My education details: [Bachelor of Science in Computer Science](education_details)
+    - I studied [Bachelor of Science in Computer Science](education_details)
+
+- intent: provide_technology
+  examples: |
+    - I have experience with [Python, Java](technology)
+    - My technology skills include [Python, Java](technology)
+    - I know [Python](technology) and [Java](technology)
+
+- intent: provide_experience
+  examples: |
+    - I have [5 years](experience) of experience
+    - My experience is [5 years](experience)
+    - I have worked for [5 years](experience)
+
+
+# 1. **Rasa Core Test**: Tests the stories to ensure the dialogue management is correct.
+#    ```sh
+#    rasa test core
+#    ```
+
+# 2. **Rasa NLU Test**: Tests the NLU model to ensure intents and entities are correctly identified.
+#    ```sh
+#    rasa test nlu
+#    ```
+
+# 3. **Combined Test**: Tests both NLU and Core together.
+#    ```sh
+#    rasa test
+#    ```

@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+
+- story: List Orders Story
+  steps:
+    - intent: list_orders
+    - action: action_list_orders
+
+- story: Order Details Story
+  steps:
+    - intent: order_details
+      entities:
+        - order_id: '12345'
+    - action: action_order_details
+
+- story: Order Status Story
+  steps:
+    - intent: order_status
+      entities:
+        - order_id: '12345'
+    - action: action_order_status
+
+- story: Raise Concern Story
+  steps:
+    - intent: raise_concern
+      entities:
+        - order_id: '12345'
+        - concern: "late delivery"
+    - action: action_raise_concern

@@ -1,0 +1,97 @@
+version: '3.1'
+entities:
+- orderNo
+- conversation_state
+intents:
+- affirm
+- ask_handoff
+- bot_challenge
+- conv_stopper
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- nlu_fallback
+- order_complaint_intent
+- order_intent
+- order_number_intent
+- product_search_intent
+- track_order_intent
+- user_complaint_text
+slots:
+  orderNo:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: orderNo
+  complaint_content:
+    type: text
+    mappings:
+    - type: from_text
+      influence_conversation: true
+  product_search_query:
+    type: text
+    mappings:
+    - type: from_text
+      influence_conversation: true
+      intent: product_search_intent
+  complete_complaint_text:
+    type: text
+    mappings:
+    - type: custom
+      action: action_complaint_record
+      intent:
+      - order_complaint_intent user_complaint_text order_number_intent
+  conversation_state:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: conversation_state
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_order_info:
+  - text: Yes sure I can help you with your order. Let me know what you need
+  utter_order_number_action:
+  - text: Can you tell me the order number?
+  utter_order_details:
+  - text: Your order is in shipping state and expected to be delivered till coming monday. Stay Tuned
+  utter_complaint_info:
+  - text: Sure we will resolve your issue. Please explain your issue. And feel free to attach video or photos regarding the discrepancy if you have any.
+  utter_more_info_ques:
+  - text: Let me know if you need anything else
+  utter_raised_ticket:
+  - text: I have created a ticket with the team and we will get back to you
+  utter_handoff:
+  - text: Transferring you to a human assistant
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_greet
+- handoff_action
+- utter_complaint_info
+- utter_order_number_action
+- utter_raised_ticket
+- utter_more_info_ques
+- utter_order_details
+- utter_happy
+- utter_order_info
+- utter_iamabot
+- utter_goodbye
+- utter_did_that_help
+- utter_cheer_up
+- action_complaint_record
+- product_search_action

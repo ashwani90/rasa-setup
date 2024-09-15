@@ -1,0 +1,7 @@
+out.log
+story_graph.dot
+.env
+.rasa
+models/**/*
+./*/models/**/*
+env

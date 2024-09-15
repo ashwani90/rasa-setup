@@ -1,0 +1,170 @@
+version: "3.1"
+nlu:
+- intent: ask_product_info
+  examples: |
+    - Can you tell me about [iPhone 12](product)?
+    - What are the features of the [Samsung Galaxy S21](product)?
+    - I'm interested in the [Sony WH-1000XM4](product) headphones.
+    - Give me details about the [MacBook Pro](product).
+    - What specifications does the [Dell XPS 13](product) have?
+    - Tell me more about the [Apple Watch Series 6](product).
+    - What can you tell me about the [Google Pixel 5](product)?
+    - I'd like to know more about the [OnePlus 8T](product).
+    - Could you provide information on the [HP Spectre x360](product)?
+    - What is the price of the [Xbox Series X](product)?
+    - How does the [PlayStation 5](product) compare to other consoles?
+    - Can you give me a summary of the [Samsung QLED TV](product)?
+    - What are the advantages of the [Bose QuietComfort 35 II](product) headphones?
+    - Do you have details on the [Canon EOS R5](product) camera?
+    - I need information about the [Nikon Z6](product).
+    - Tell me the specs of the [Microsoft Surface Pro 7](product).
+    - What can you tell me about the [Asus ROG Zephyrus G14](product) laptop?
+    - Provide me with details on the [Amazon Echo Dot](product).
+    - What's special about the [Garmin Fenix 6](product) smartwatch?
+    - I'm looking for more information on the [Fitbit Charge 4](product).
+
+- intent: ask_product_availability
+  examples: |
+    - Is [iPhone 12](product) available?
+    - Do you have [Samsung Galaxy S21](product) in stock?
+    - Can I buy a [MacBook Pro](product) right now?
+    - Are there any [AirPods Pro](product) available?
+    - Do you have [PlayStation 5](product) available?
+    - Is the [Dell XPS 13](product) in stock?
+    - Can I get a [Google Pixel 5](product) from your store?
+    - Do you have [Nintendo Switch](product) in stock?
+    - Is the [Sony A7 III](product) available for purchase?
+    - Are there any [Microsoft Surface Pro 7](product) units available?
+    - Do you have the [HP Spectre x360](product) in stock?
+    - Is the [Canon EOS R5](product) available?
+    - Can I order a [Fitbit Charge 4](product) right now?
+    - Do you have [Xiaomi Mi 11](product) available?
+    - Is [Oculus Quest 2](product) in stock?
+    - Do you have [OnePlus 9 Pro](product) in stock?
+    - Is the [Apple Watch Series 6](product) available?
+    - Can I buy [Samsung Galaxy Buds Live](product) from you?
+    - Are there any [Amazon Echo Dot](product) devices available?
+    - Is the [Bose QuietComfort 35 II](product) in stock?
+    - Do you have [JBL Flip 5](product) available?
+    - Is the [Razer Blade 15](product) available for purchase?
+    - Can I get a [Logitech MX Master 3](product) from your store?
+    - Is the [Sony WH-1000XM4](product) available?
+    - Are there any [Nikon D850](product) units available?
+    - Do you have [Huawei P40 Pro](product) in stock?
+    - Is the [Google Nest Hub](product) available?
+    - Can I order a [Ring Video Doorbell 3](product) right now?
+    - Is [Samsung Galaxy Tab S7](product) in stock?
+    - Do you have [Asus ROG Zephyrus G14](product) available?
+    - Is the [Dell UltraSharp U2720Q](product) in stock?
+    - Are there any [Acer Predator Helios 300](product) units available?
+    - Do you have [LG CX OLED](product) available?
+
+- intent: ask_product_price
+  examples: |
+    - What is the price of [iPhone 12](product)?
+      - How much does a [MacBook Pro](product) cost?
+      - Can you tell me the price of [Samsung Galaxy S21](product)?
+      - What is the cost of a [Dell XPS 13](product)?
+      - How much is the [Sony WH-1000XM4](product)?
+      - Price for [AirPods Pro](product)?
+      - How much does the [iPad Pro](product) cost?
+      - What's the price of [Amazon Echo](product)?
+      - Can you give me the price for [Surface Pro 7](product)?
+      - What is the price for [Google Pixel 5](product)?
+      - How much should I pay for [PlayStation 5](product)?
+      - What does a [Nintendo Switch](product) cost?
+      - How much is the [Fitbit Charge 4](product)?
+      - Tell me the price of [GoPro Hero 9](product).
+      - How much is the new [Apple Watch](product)?
+      - What’s the price for a [Razer Blade 15](product)?
+      - How much is a [Bose QuietComfort 35](product)?
+      - What is the cost of [OnePlus 9](product)?
+      - Price for the latest [Xiaomi Mi 11](product)?
+      - How much do I have to pay for [Canon EOS R5](product)?
+
+- intent: ask_product_features
+  examples: |
+    - Can you tell me the features of [iPhone 12](product)?
+      - What are the specifications of [Samsung Galaxy S21](product)?
+      - Describe the features of [MacBook Pro](product).
+      - What does the [Sony WH-1000XM4](product) offer?
+      - What are the main features of the [Dell XPS 13](product)?
+      - Tell me about the [Google Pixel 5](product) features.
+      - What can you tell me about the [iPad Air](product)?
+      - Could you provide details on [OnePlus 9](product) features?
+      - What are the key specifications of the [HP Spectre x360](product)?
+      - Give me the features of the [Bose QuietComfort 35 II](product).
+      - What functionalities does the [Fitbit Charge 4](product) have?
+      - What are the special features of the [Amazon Echo Dot](product)?
+      - Can you list the features of the [Nikon D3500](product)?
+      - I want to know the specs of [Asus ZenBook](product).
+      - Could you tell me what the [Surface Pro 7](product) includes?
+      - What does the [PlayStation 5](product) offer in terms of features?
+      - What features come with the [GoPro Hero 9](product)?
+      - What are the capabilities of the [Roku Streaming Stick+](product)?
+      - Can you describe the features of the [Samsung QLED TV](product)?
+      - What should I expect from the [Sony A7 III](product) features?
+      - Tell me about the [Microsoft Surface Laptop 4](product).
+      - I need details about the [Canon EOS R6](product) features.
+      - What are the attributes of the [JBL Flip 5](product)?
+      - Explain the features of the [Lenovo ThinkPad X1 Carbon](product).
+      - What features are included in the [Apple Watch Series 6](product)?
+      - Can you provide a breakdown of the [LG CX OLED](product) features?
+      - What are the highlights of the [Nvidia RTX 3080](product)?
+      - Could you tell me what the [Dyson V11](product) can do?
+      - What does the [Nintendo Switch](product) offer in terms of specifications?
+      - What features does the [Google Nest Hub](product) have?
+
+- intent: ask_store_hours
+  examples: |
+    - What are the opening hours for [Target](store_name)?
+    - Can you tell me the store hours for [Walmart](store_name)?
+    - When does [Best Buy](store_name) open?
+    - What time does [Costco](store_name) close?
+    - Could you give me the hours for [IKEA](store_name)?
+    - What are the business hours for [Macy's](store_name)?
+    - Is [Starbucks](store_name) open now?
+    - Can you tell me when [Kroger](store_name) is open?
+    - I need the store hours for [Whole Foods](store_name)
+    - What time does [Home Depot](store_name) open today?
+    - When can I visit [Sephora](store_name)?
+    - Are the opening times for [Trader Joe's](store_name) available?
+    - What are the hours of operation for [Aldi](store_name)?
+    - When is [Walgreens](store_name) open?
+    - How late is [CVS](store_name) open?
+    - Is [Barnes & Noble](store_name) open late?
+    - What are [Sam's Club](store_name) hours?
+    - Tell me the opening times for [Staples](store_name)
+    - I need to know when [Office Depot](store_name) is open
+    - What time does [Lowe's](store_name) close tonight?
+
+- intent: ask_store_location
+  examples: |
+    - Where is [Store A](store)?
+    - Can you tell me the location of [Store B](store)?
+    - How can I get to [Store C](store)?
+    - What is the address of [Store D](store)?
+    - I need the location of [Store E](store).
+    - Could you give me directions to [Store F](store)?
+    - Where can I find [Store G](store)?
+    - What is the location of [Store H](store)?
+    - Where is the nearest [Store I](store)?
+    - Where's [Store J](store) located?
+    - I want to visit [Store K](store). Where is it?
+    - Tell me where [Store L](store) is.
+    - Give me the address of [Store M](store).
+    - How do I get to [Store N](store)?
+    - Where is the closest [Store O](store)?
+    - Where are you located?
+    - Where is your main store?
+    - Can you provide the location for [Store P](store)?
+    - I'm looking for the [Store Q](store) address.
+    - Where is the [Store R](store) situated?
+    - What's the location of [Store S](store)?
+    - Please give me the location of [Store T](store).
+    - Can you tell me where [Store U](store) is?
+    - I need directions to [Store V](store).
+    - Where is the address of [Store W](store)?
+    - How do I find [Store X](store)?
+    - Where is the head office of [Store Y](store)?
+    - What is the location for [Store Z](store)?

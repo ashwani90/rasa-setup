@@ -1,0 +1,179 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: order complaint path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_intent
+  - action: utter_order_info
+  - intent: track_order_intent
+  - action: utter_order_number_action
+  - intent: order_number_intent
+    entities:
+    - orderNo: '12345'
+  - slot_was_set:
+    - orderNo: '12345'
+  - action: utter_order_details
+  - intent: conv_stopper
+    entities:
+    - conversation_state: 'ok'
+  - slot_was_set:
+    - conversation_state: 'ok'
+  - action: utter_more_info_ques
+  - intent: affirm
+  - action: utter_more_info_ques
+  - intent: order_complaint_intent
+  - action: utter_complaint_info
+
+- story: order complaint path without data
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: track_order_intent
+  - action: utter_order_number_action
+  - intent: order_number_intent
+    entities:
+    - orderNo: '12345'
+  - slot_was_set:
+    - orderNo: '12345'
+  - action: utter_order_details
+  - intent: conv_stopper
+    entities:
+    - conversation_state: 'ok'
+  - slot_was_set:
+    - conversation_state: 'ok'
+  - action: utter_more_info_ques
+  - intent: order_complaint_intent
+  - action: utter_complaint_info
+  # next custom action will start
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: track_order_intent
+  - action: utter_order_number_action
+  - intent: order_number_intent
+    entities:
+    - orderNo: '12345'
+  - slot_was_set:
+    - orderNo: '12345'
+  - action: utter_order_details
+  - intent: conv_stopper
+    entities:
+    - conversation_state: 'ok'
+  - slot_was_set:
+    - conversation_state: 'ok'
+  - action: utter_more_info_ques
+  - intent: affirm
+  - action: utter_more_info_ques
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: track_order_intent
+  - action: utter_order_number_action
+  - intent: order_number_intent
+    entities:
+    - orderNo: '12345'
+  - slot_was_set:
+    - orderNo: '12345'
+  - action: utter_order_details
+  - intent: conv_stopper
+    entities:
+    - conversation_state: 'ok'
+  - slot_was_set:
+    - conversation_state: 'ok'
+  - action: utter_more_info_ques
+
+
+- story: order complaint simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_complaint_intent
+  - action: utter_complaint_info
+  # from here we call custom actions and let llm  get all the data needed for
+  # ticket it will ask the question and record answers
+  # need to classify what kind of problem
+  # get all info and save it to db
+  - intent: order_number_intent
+    entities:
+    - orderNo: '12345'
+  - slot_was_set:
+    - orderNo: '12345'
+  - action: utter_raised_ticket
+  - intent: conv_stopper
+    entities:
+    - conversation_state: 'ok'
+  - slot_was_set:
+    - conversation_state: 'ok'
+  - action: utter_more_info_ques
+
+- story: interactive_story_3
+  steps:
+  - intent: order_complaint_intent
+  - action: utter_complaint_info
+  # get all the data from already existing chats and populate this
+  - intent: user_complaint_text
+  - slot_was_set:
+    - complaint_content: 'text'
+  - action: action_complaint_record
+  - intent: order_number_intent
+    entities:
+    - orderNo: 'ORD12345'
+  - slot_was_set:
+    - orderNo: 'ORD12345'
+    - complaint_content: 'text'
+  - action: action_complaint_record
+  - intent: conv_stopper
+    entities:
+    - conversation_state: ok
+  - slot_was_set:
+    - conversation_state: ok
+  - action: utter_more_info_ques
+
+- story: product_intent
+  steps:
+  - intent: product_search_intent
+  - slot_was_set:
+    - product_search_query: 'text'
+  - action: product_search_action
+
+- story: human handoff
+  steps:
+  - intent: ask_handoff
+  - action: handoff_action
+

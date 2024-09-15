@@ -1,0 +1,232 @@
+version: "3.1"
+nlu:
+- intent: order_intent
+  examples: |
+    - Hey can you help me with my order
+    - I need info about my order
+    - I want to know about my order
+    - I want information about my order
+    - Can you tell me something about my order
+    - Hi, I'm having some issues with my order. Could you assist me?
+    - Hello, I need some help with my order. Can you please guide me?"
+    - Can you help me sort out a problem with my order?"
+    - I'm facing some trouble with my order. Could you help me out?"
+    - Could you provide assistance with my order, please?"
+    - Hey, I need help with my order. Can you assist?"
+    - I'm experiencing some problems with my order. Can you help?"
+    - Can you help me resolve an issue with my order?"
+    - Hello, can you assist me with my order details?"
+    - I need some assistance with my order. Could you help me, please?"
+- intent: track_order_intent
+  examples: |
+    - Can you help me find out where my order is [ORD12345](orderNo)?
+    - I'd like to track my order, can you assist me?
+    - Can you tell me the current status of my order?
+    - Where is my order right now? Can you check?
+    - Could you provide the tracking information for my order?
+    - Can you tell me when my order will be delivered?
+    - I need to track my shipment. Can you help?
+    - Can you update me on the location of my package?
+    - Is it possible to track my order?
+    - Can you let me know if my order has been shipped?
+    - Hi, I can't find my order. Can you help?
+    - Hello, my order seems to be missing. Can you check on it?
+    - Hi, my order hasn't arrived yet. What's going on?
+    - Hey, I think my order is lost. Can you look into it?
+    - Hi, I didn't receive my order. Can you assist me?
+    - Hello, my order is missing. Can you track it for me?
+    - Hi, my package hasn't shown up. Can you help find it?
+    - Hello, I haven't gotten my order. Can you help me locate it?
+    - Hi, my order is not here yet. Can you tell me where it is?
+    - Hey, I'm missing my order. Can you provide an update?
+    - Can you help me find the status of my order with number [ORD12345](orderNo)?
+    - I need to check on my order, order number [ORD12345](orderNo). Can you track it for me?
+    - Can you provide an update on my order [ORD12345](orderNo)?
+    - Can you look up my order status using order number [ORD12345](orderNo)?
+    - Is it possible to track my order with this number: [ORD12345](orderNo)?
+    - Could you tell me where my order [ORD12345](orderNo) is at the moment?
+    - I would like to know the status of my order, number [ORD12345](orderNo). Can you help?
+    - Can you give me a tracking update for my order [ORD12345](orderNo)?
+    - Can you check the status of my order? The number is [ORD12345](orderNo).
+    - I want to know where is my order
+    - I want to track my order
+- intent: order_number_intent
+  examples: |
+    - Sure my order number is [ORD12345](orderNo).
+    - My order number is [ORD12345](orderNo)
+    - My order number is [ORD12345](orderNo).
+    - It’s [ORD12345](orderNo).
+    - [ORD12345](orderNo)
+    - The order number is [ORD12345](orderNo).
+    - You can find my order with [ORD12345](orderNo).
+    - Here’s the order number: [ORD12345](orderNo).
+    - I have the order number ready, it’s [ORD12345](orderNo).
+    - Sure, the order number is [ORD12345](orderNo).
+    - Order number [ORD12345](orderNo).
+    - The number you need is [ORD12345](orderNo).
+    - For my order, use [ORD12345](orderNo).
+    - I placed an order with the number [ORD12345](orderNo).
+    - [ORD12345](orderNo) is my order number.
+    - Please check [ORD12345](orderNo) for my order.
+    - The number for my order is [ORD12345](orderNo).
+    - Look up order number [ORD12345](orderNo), please.
+    - Sure, it's [ORD12345](orderNo).
+    - You’ll find my order under [ORD12345](orderNo).
+    - [ORD12345](orderNo) is the order number.
+    - My order number is: [ORD12345](orderNo).
+    - It’s order number [ORD12345](orderNo).
+    - My order has not been delivered and I want it to be delivered
+- intent: order_complaint_intent
+  examples: |
+    - I have a complaint on this order
+    - I want to raise an issue with the order
+    - I need to file a complaint about this order.
+    - I have an issue with my order.
+    - I want to raise a complaint regarding this order.
+    - There's a problem with my order.
+    - I need to discuss a complaint about this order.
+    - I have a concern about my order.
+    - I have a complaint about the order I received.
+    - I'm unhappy with my order.
+    - I need to report a problem with this order.
+    - I have a grievance about my order.
+    - There’s something wrong with my order.
+    - I want to address a complaint regarding this order.
+    - I’m not satisfied with this order.
+    - I have an issue that I need to complain about concerning my order.
+    - I need to express my dissatisfaction with this order.
+    - I have a complaint I’d like to make about this order.
+    - I need to report an issue with my order.
+    - I have a problem with the order I received.
+    - I have a concern I need to raise about this order.
+    - I’d like to lodge a complaint about my order.
+    - I have a problem with my order.
+    - There's an issue with my order that I need help with.
+    - I want to file a complaint about my order.
+    - I need assistance with a problem in my order.
+    - Can I report a problem with my order?
+    - I have a concern regarding my order.
+    - There's something wrong with my order.
+    - I want to discuss an issue with my recent order.
+    - I need to address a problem with my order.
+    - Can I raise a concern about my order?
+    - I need to report a discrepancy in my order.
+    - I want to bring up an issue with my order.
+    - There's an error with my order that I need to fix.
+    - Can I talk to someone about a problem with my order?
+    - I have an issue with my order that needs attention.
+    - I need to raise a problem with my order.
+    - I want to report a defect in my order.
+    - Can you help me with a problem in my order?
+    - I need to bring an issue with my order to your attention.
+    - I want to raise a complaint on my order
+- intent: product_search_intent
+  examples: |
+    - I am looking for dell laptop can you suggest some
+    - Do you have an [hp] [laptop]
+    - Do you have [Dell] [Computer]
+    - Do you have [Dell] [Phone]
+    - I want to buy [Skull Candy] [Earphones]
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - thanks
+- intent: conv_stopper
+  examples: |
+    - [ok](conversation_state)
+    - I see
+    - I understand
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - I am good
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: nlu_fallback
+  examples: |
+    - Jkinda
+- intent: user_complaint_text
+  examples: |
+    - My order is not delivered
+    - When will my order will be delivered
+    - I have product missing
+- intent: ask_handoff
+  examples: |
+    - Can you transfer me to a human?
+    - Please transfer me to a human agent
+    - I want to talk to a human
+    - I want to talk to a human agent

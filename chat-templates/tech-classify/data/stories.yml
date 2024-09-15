@@ -1,0 +1,20 @@
+version: "3.1"
+
+stories:
+
+
+- story: Ask Topic Story
+  steps:
+    - intent: ask_topic
+      entities:
+        - topic: "Python"
+    - action: action_set_topic
+    - slot_was_set:
+        - topic: "Python"
+    - action: action_fetch_document
+
+
+- story: Ask Further Question Story
+  steps:
+    - intent: ask_further_question
+    - action: action_answer_further_question

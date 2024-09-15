@@ -1,0 +1,63 @@
+version: "3.1"
+nlu:
+- intent: ask_topic
+  examples: |
+    - I'm interested in machine learning.
+    - Can you tell me about Python programming?
+    - I want to learn more about cloud computing.
+    - Could you provide information on blockchain technology?
+    - Tell me about artificial intelligence.
+    - I'm curious about data science.
+    - What can you tell me about cybersecurity?
+    - I'm interested in web development.
+    - Can you explain quantum computing to me?
+    - Tell me about the Internet of Things (IoT).
+    - I want to know more about software engineering.
+    - Could you provide information on mobile app development?
+    - What's new in augmented reality?
+    - Can you explain virtual reality (VR) technology?
+    - I want to learn about digital marketing strategies.
+    - Tell me about user experience (UX) design.
+    - Can you provide information on e-commerce trends?
+    - What is big data analytics?
+    - Tell me about the latest trends in fintech.
+    - I'm interested in robotics and automation.
+    
+
+- intent: ask_further_question
+  examples: |
+    - How can I get started with machine learning?
+    - What are the best Python libraries for data science?
+    - Can you recommend online courses for cloud computing?
+    - How does blockchain technology ensure security?
+    - Are there any applications of artificial intelligence in healthcare?
+    - What are the career opportunities in data science?
+    - Can you explain the role of cybersecurity in business?
+    - How can I become a front-end web developer?
+    - What are the advantages of using quantum computing?
+    - How does IoT impact everyday life?
+    - Which programming languages are essential for software engineering?
+    - Can you suggest resources for learning mobile app development?
+    - What industries are adopting augmented reality?
+    - How can virtual reality be used in education?
+    - What are the latest trends in digital marketing?
+    - How does UX design improve user engagement?
+    - What are the key features of successful e-commerce platforms?
+    - How is big data analytics transforming businesses?
+    - What are the risks associated with fintech innovations?
+    - How can robotics improve manufacturing processes?
+- intent: ask_player_details
+  examples: |
+    - Please tell me about [virat kohli](player_name)
+    - Who is [Virat Kohli](player_name)
+    - Tell me about cricket player [Virat kohli](player_name)
+
+- intent: ask_match_details
+  examples: |
+    - What happened in [match-62](match_id)
+    - Give details of match [match-62](match_id)
+  
+- intent: ask_statistics
+  examples: |
+    - Tell me total [runs](runs) for virat kohli?
+    - What [runs](runs) virat kohli has scored?

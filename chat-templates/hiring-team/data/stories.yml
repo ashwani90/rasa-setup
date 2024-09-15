@@ -1,0 +1,69 @@
+version: "3.1"
+
+stories:
+
+
+- story: Provide Contact Info Story
+  steps:
+    - intent: provide_contact_info
+      entities:
+        - contact_info: "j@d.com"
+    - action: action_save_contact_info
+    - slot_was_set:
+        - contact_info: "j@d.com"
+
+
+- story: Provide Education Details Story
+  steps:
+    - intent: provide_education_details
+      entities:
+        - education_details: "Bachelor of Science in Computer Science"
+    - action: action_save_education_details
+    - slot_was_set:
+        - education_details: "Bachelor of Science in Computer Science"
+
+- story: Provide Technology Story
+  steps:
+    - intent: provide_technology
+      entities:
+        - technology: "Python, Java"
+    - action: action_save_technology
+    - slot_was_set:
+        - technology: "Python, Java"
+
+- story: Provide Experience Story
+  steps:
+    - intent: provide_experience
+      entities:
+        - experience: "5 years"
+    - action: action_save_experience
+    - slot_was_set:
+        - experience: "5 years"
+
+- story: collect_all_details
+  steps:
+    - intent: provide_contact_info
+      entities:
+      - contact_info: "john.doe@example.com"
+    - action: action_save_contact_info
+    - slot_was_set:
+      - contact_info: "john.doe@example.com"
+    - intent: provide_education_details
+      entities:
+      - education_details: "Bachelor of Science in Computer Science"
+    - action: action_save_education_details
+    - slot_was_set:
+      - education_details: "Bachelor of Science in Computer Science"
+    - intent: provide_technology
+      entities:
+      - technology: "Python, Java"
+    - action: action_save_technology
+    - slot_was_set:
+      - technology: "Python, Java"
+    - intent: provide_experience
+      entities:
+      - experience: "5 years"
+    - action: action_save_experience
+    - slot_was_set:
+      - experience: "5 years"
+    - action: action_save_user_details

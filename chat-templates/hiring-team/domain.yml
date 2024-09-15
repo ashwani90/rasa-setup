@@ -1,0 +1,52 @@
+version: '3.1'
+entities:
+  - contact_info
+  - education_details
+  - technology
+  - experience
+
+
+intents:
+  - provide_contact_info
+  - provide_education_details
+  - provide_technology
+  - provide_experience
+
+
+slots:
+  contact_info:
+    type: text
+    influence_conversation: true
+  education_details:
+    type: text
+    influence_conversation: true
+  technology:
+    type: text
+    influence_conversation: true
+  experience:
+    type: text
+    influence_conversation: true
+
+
+responses:
+  utter_ask_contact_info:
+    - text: "Please provide your contact information."
+  utter_ask_education_details:
+    - text: "Please provide your education details."
+  utter_ask_technology:
+    - text: "Please provide your technology skills."
+  utter_ask_experience:
+    - text: "Please provide your experience."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+  - action_save_contact_info
+  - action_save_education_details
+  - action_save_technology
+  - action_save_experience
+  - action_save_user_details
+
+
+

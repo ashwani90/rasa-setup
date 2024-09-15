@@ -1,0 +1,135 @@
+version: "3.1"
+nlu:
+- intent: list_orders
+  examples: |
+    - Can you show me my orders list?
+    - I want to see my order history.
+    - Show me my previous orders.
+    - I'd like to check my orders.
+    - Can I view my past orders?
+    - Please display my order list.
+    - Where can I find my order history?
+    - Can you provide my order list?
+    - I need to see my orders.
+    - Show my orders.
+    - How can I access my order history?
+    - Can I see a list of my orders?
+    - I'd like to look at my previous purchases.
+    - Show me all my orders.
+    - I want to review my past orders.
+    - Give me my order list.
+    - Can I get a list of my orders?
+    - I need my order history.
+    - Please show me my previous purchases.
+    - Can you pull up my orders list?
+    - I want to see my recent orders.
+    - Show me the list of my orders.
+    - I need to check my order history.
+    - Can you list my past orders?
+    - I want to view my order list.
+    - How can I see my past orders?
+    - Display my order history.
+    - Show me the history of my orders.
+    - Can I access my previous orders?
+    - Please provide me with my order list.
+    - Let me see my orders.
+    - I need to check my purchase history.
+    - Can you show me the orders I have made?
+    - I want to look at my previous orders.
+    - Show me the list of my purchases.
+    - Where can I view my order list?
+    - I need to see my orders list.
+    - Can you display my order history?
+    - I want to check my orders list.
+    - Give me a list of my previous orders.
+    - Show me all my past orders.
+
+- intent: order_details
+  examples: |
+    - Can you tell me the details of my order [12345](order_id)?
+    - I need information about my order [98765](order_id).
+    - Please provide the details for order [54321](order_id).
+    - What is the status of order [67890](order_id)?
+    - I want to know the details of my order [11223](order_id).
+    - Give me the details of order [33445](order_id).
+    - Tell me about my order [99887](order_id).
+    - Can I get the details for order [77665](order_id)?
+    - I need to check the status of order [22334](order_id).
+    - What are the details for order [55678](order_id)?
+    - Could you give me information on order [66789](order_id)?
+    - Check order [44556](order_id) for me.
+    - I need the status of my order [23456](order_id).
+    - Look up the details for order [34567](order_id).
+    - Show me the details of order [78901](order_id).
+    - Can you provide the status for order [89012](order_id)?
+    - What is happening with order [90123](order_id)?
+    - Please tell me the details of order [34512](order_id).
+    - I would like to know the status of order [56734](order_id).
+    - Can you check on order [67845](order_id) for me?
+    - I have an order with number [78956](order_id), what are the details?
+    - I placed an order with ID [89067](order_id), can I get the details?
+    - Provide information on my order [90178](order_id).
+    - Order [23467](order_id), what is the status?
+    - What's going on with order [34578](order_id)?
+
+- intent: order_status
+  examples: |
+    - What is the status of my order [12345](order_id)?
+    - Can you check the status of order [67890](order_id)?
+    - Where is my order [54321](order_id)?
+    - I need to know the status of my order [98765](order_id).
+    - Please provide an update on order [11223](order_id).
+    - What’s happening with order [33445](order_id)?
+    - Can you tell me the status of order [55667](order_id)?
+    - How is order [77889](order_id) doing?
+    - Is order [99000](order_id) shipped?
+    - When will order [10101](order_id) arrive?
+    - I want to track my order [20202](order_id).
+    - Give me the status of order [30303](order_id).
+    - Has order [40404](order_id) been delivered?
+    - Is order [50505](order_id) on its way?
+    - Where can I track order [60606](order_id)?
+    - Can you tell me about order [70707](order_id)?
+    - What’s the delivery status of order [80808](order_id)?
+    - I need an update on order [90909](order_id).
+    - Check the status of my order [01010](order_id).
+    - Has order [11111](order_id) been processed?
+    - What’s the ETA for order [22222](order_id)?
+    - Is order [33333](order_id) out for delivery?
+    - Where is my shipment for order [44444](order_id)?
+    - Tell me the status of my order [55555](order_id).
+    - Order [66666](order_id) status, please.
+    - Can you find order [77777](order_id) for me?
+    - What is going on with order [88888](order_id)?
+    - Is my order [99999](order_id) on the way?
+    - When can I expect order [00001](order_id)?
+    - Has order [22223](order_id) left the warehouse?
+
+- intent: raise_concern
+  examples: |
+    - I have an issue with my order [ORD12345](order_id). It arrived damaged.
+    - There's a problem with my order [ORD67890](order_id). It was the wrong item.
+    - My order [ORD54321](order_id) hasn't arrived yet.
+    - I received a faulty product in order [ORD98765](order_id).
+    - Can you help me with my order [ORD11223](order_id)? It's missing items.
+    - I want to report a problem with order [ORD44556](order_id). The packaging was torn.
+    - I'm facing an issue with order [ORD77889](order_id). It was delivered to the wrong address.
+    - My order [ORD99001](order_id) was incomplete.
+    - There's an issue with my order [ORD22334](order_id). The product doesn't work.
+    - Order [ORD55667](order_id) was supposed to be delivered yesterday but it hasn’t arrived.
+    - The item in order [ORD88990](order_id) is broken.
+    - I want to raise a concern about my order [ORD33445](order_id). It's defective.
+    - My order [ORD66778](order_id) is late.
+    - I received a different product in order [ORD99112](order_id).
+    - I need help with order [ORD12321](order_id). It came without a user manual.
+    - The item in order [ORD67812](order_id) is not as described.
+    - Order [ORD54312](order_id) is missing some parts.
+    - The color of the item in order [ORD98721](order_id) is different from what I ordered.
+    - I want to report a delay in my order [ORD12398](order_id).
+    - There’s a quality issue with my order [ORD98734](order_id).
+    - I received a wrong product in order [ORD65432](order_id).
+    - The order [ORD32165](order_id) has not been shipped yet.
+    - The item in order [ORD65478](order_id) arrived in poor condition.
+    - Can you check my order [ORD78965](order_id)? The product is malfunctioning.
+    - I’m not satisfied with my order [ORD85236](order_id). It's not what I expected.
+

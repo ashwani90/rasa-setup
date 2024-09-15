@@ -1,0 +1,4 @@
+handoff_hosts:
+    assistant:
+      title: "Assistant"
+      url: "ws://127.0.0.1:8000/ws/chat/"
