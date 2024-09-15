@@ -3,5 +3,5 @@ story_graph.dot
 .env
 .rasa
 models/**/*
-./*/models/**/*
+chat-templates/**/models/*
 env
