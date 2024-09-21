@@ -14,8 +14,14 @@ intents:
 slots:
   order_id:
     type: text
+    mappings:
+    - type: from_entity
+      entity: order_id
   concern:
     type: text
+    mappings:
+    - type: from_entity
+      entity: concern
   status:
     type: any
     mappings:

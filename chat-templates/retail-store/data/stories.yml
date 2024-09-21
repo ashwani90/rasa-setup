@@ -23,7 +23,7 @@ stories:
     - intent: ask_product_availability
       entities: 
       - product: "product_name"
-    action: action_check_product_availability
+    - action: action_check_product_availability
     
 - story: ask product price
   steps:

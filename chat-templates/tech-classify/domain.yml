@@ -12,6 +12,9 @@ slots:
   topic:
     type: text
     influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: topic
 
 responses:
   utter_ask_topic:

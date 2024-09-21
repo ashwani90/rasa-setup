@@ -16,12 +16,24 @@ intents:
 slots:
   technology:
     type: text
+    mappings:
+    - type: from_entity
+      entity: technology
   demographics:
     type: text
+    mappings:
+    - type: from_entity
+      entity: demographics
   course_name:
     type: text
+    mappings:
+    - type: from_entity
+      entity: course_name
   book_name:
     type: text
+    mappings:
+    - type: from_entity
+      entity: book_name
 
 responses:
   utter_you_are_welcome:

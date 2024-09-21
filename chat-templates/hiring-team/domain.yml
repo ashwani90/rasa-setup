@@ -17,15 +17,27 @@ slots:
   contact_info:
     type: text
     influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: contact_info
   education_details:
     type: text
     influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: education_details
   technology:
     type: text
     influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: technology
   experience:
     type: text
     influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: experience
 
 
 responses:

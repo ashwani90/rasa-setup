@@ -1,0 +1,118 @@
+version: '3.1'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- request_restaurant:
+    use_entities: []
+- chitchat:
+    use_entities: []
+- inform:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- stop:
+    use_entities: true
+- thankyou:
+    use_entities: true
+- greet:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+entities:
+- cuisine
+- number
+- feedback
+- seating
+slots:
+  cuisine:
+    type: rasa.shared.core.slots.TextSlot
+    influence_conversation: false
+    mappings:
+    - type: custom
+  num_people:
+    type: rasa.shared.core.slots.FloatSlot
+    influence_conversation: false
+    max_value: 1.0
+    min_value: 0.0
+    mappings:
+    - type: custom
+  outdoor_seating:
+    type: rasa.shared.core.slots.TextSlot
+    influence_conversation: false
+    mappings:
+    - type: custom
+  preferences:
+    type: rasa.shared.core.slots.TextSlot
+    influence_conversation: false
+    mappings:
+    - type: custom
+  feedback:
+    type: rasa.shared.core.slots.TextSlot
+    influence_conversation: false
+    mappings:
+    - type: custom
+  requested_slot:
+    type: rasa.shared.core.slots.TextSlot
+    influence_conversation: false
+    mappings:
+    - type: custom
+responses:
+  utter_ask_cuisine:
+  - text: What cuisine?
+  utter_ask_num_people:
+  - text: How many people?
+  utter_ask_outdoor_seating:
+  - text: Do you want to sit outside?
+  utter_ask_preferences:
+  - text: Please provide additional preferences
+  utter_ask_feedback:
+  - text: Please give your feedback on your experience so far
+  utter_submit:
+  - text: All done!
+  utter_slots_values:
+  - text: |-
+      I am going to run a restaurant search using the following parameters:
+       - cuisine: {cuisine}
+       - num_people: {num_people}
+       - outdoor_seating: {outdoor_seating}
+       - preferences: {preferences}
+       - feedback: {feedback}
+  utter_noworries:
+  - text: You are welcome :)
+  utter_chitchat:
+  - text: chitchat
+  utter_ask_continue:
+  - text: Do you want to continue?
+  utter_wrong_cuisine:
+  - text: Cuisine type is not in the database, please try again
+  utter_wrong_num_people:
+  - text: Number of people should be a positive integer, please try again
+  utter_wrong_outdoor_seating:
+  - text: Could not convert input to boolean value, please try again
+  utter_default:
+  - text: Sorry, I didn't understand you, please try input something else
+  utter_greet:
+  - text: Hello! I am restaurant search assistant! How can I help?
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_restart:
+  - text: restarted
+actions:
+- validate_restaurant_form
+forms:
+  restaurant_form:
+    ignored_intents:
+    - chitchat
+    required_slots:
+      - cuisine
+      - feedback
+      - num_people
+      - outdoor_seating
+      - preferences
+      
+e2e_actions: []
