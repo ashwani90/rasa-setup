@@ -237,3 +237,22 @@ rasa train --domain chat-templates/tech-classify/domain.yml --data chat-template
 rasa run -m chat-templates/tech-classify/models --enable-api --cors="*" --debug --endpoints endpoints.yml --credentials credentials.yml
 
 ```
+
+### Train and run insurance template
+
+```
+rasa train --domain chat-templates/insurance/domain.yml --data chat-templates/insurance/data/ --out chat-templates/insurance/models/
+
+rasa run -m chat-templates/insurance/models --enable-api --cors="*" --debug --endpoints endpoints.yml --credentials credentials.yml
+
+```
+
+### Train and run financial-spaces template
+
+```
+rasa train --domain chat-templates/financial-spaces/ --data chat-templates/financial-spaces/ --out chat-templates/financial-spaces/models/
+
+rasa run -m chat-templates/financial-spaces/models --enable-api --cors="*" --debug --endpoints endpoints.yml --credentials credentials.yml
+
+
+```

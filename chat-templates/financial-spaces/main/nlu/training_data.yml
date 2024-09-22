@@ -1,0 +1,99 @@
+version: "3.1"
+nlu:
+- lookup: weather_when
+  examples: |
+    - tomorrow
+    - next week
+- intent: deny
+  examples: |
+    - never
+    - I don't want that
+    - don't like that
+    - don't do that
+    - n
+    - I don't think so
+    - no
+    - not really
+    - cancel please
+    - don't do it
+    - stop, no
+- intent: bot_challenge
+  examples: |
+    - you talk like a [bot](machine-type)
+    - are you a [machine](machine-type)?
+    - are you an [AI](machine-type)?
+    - you are a bot, aren't you?
+    - am I just talking to a machine?
+    - am I talking to a bot?
+    - you talk like a machine
+    - am I talking to a [human](machine-type)?
+    - am I talking to a [person](machine-type)?
+    - you sound a lot like a bot
+    - are you a virtual assistant or a person?
+    - are you a [human being](machine-type)?
+    - can you tell me whether I am talking to a person?
+- intent: affirm
+  examples: |
+    - go ahead
+    - that's fine
+    - that would be great
+    - yes, please, go ahead
+    - correct
+    - of course
+    - yes please
+    - yup
+    - sure why not
+    - y
+    - sure
+    - yes
+    - that sounds good
+    - sure thing
+- intent: greet
+  examples: |
+    - hi, how are you?
+    - hey, how's it going?
+    - good day to you
+    - sup?
+    - good morning
+    - hi
+    - hey
+    - goodmorning
+    - let's go
+    - hey dude
+    - good evening
+    - hello
+    - moin
+    - good afternoon
+    - hey there
+- intent: goodbye
+  examples: |
+    - see ya
+    - goodbye
+    - good by
+    - bye then
+    - byebye
+    - see you
+    - bye bye
+    - laters
+    - bye my friend
+    - thanks bye
+    - see you later
+    - see you around
+    - good night
+    - bye
+    - catch you later
+- intent: ask_weather
+  examples: |
+    - Do you know about the weather [tomorrow]{"entity": "weather_when", "value": "weather_when"}?
+    - What's the weather [next week]{"entity": "weather_when", "value": "weather_when"}?
+
+- synonym: bot
+  examples: |
+    - assitant
+    - AI
+
+- synonym: person
+  examples: |
+    - person
+    - human
+    - human being
