@@ -230,3 +230,21 @@ nlu:
     - Please transfer me to a human agent
     - I want to talk to a human
     - I want to talk to a human agent
+- intent: job_apply
+  examples: |
+    - I want to apply for a job
+- intent: provide_contact_info
+  examples: |
+    - My phone number is [7017048852](contact_info)
+- intent: provide_education_details
+  examples: |
+    - I have done [Bachelors of Engineering](education_details)
+- intent: provide_technology
+  examples: |
+    - I have worked with [Python and Django](technology)
+- intent: provide_experience
+  examples: |
+    - [I have 5 years of experience](experience)
+- intent: stop
+  examples: |
+    - ok

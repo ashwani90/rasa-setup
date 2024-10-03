@@ -520,3 +520,6 @@ forms:
     - search_type
     - time
     - zz_confirm_form
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

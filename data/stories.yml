@@ -177,3 +177,52 @@ stories:
   - intent: ask_handoff
   - action: handoff_action
 
+
+- story: interactive_story_1
+  steps:
+  - intent: job_apply
+  - action: job_application_form
+  - active_loop: job_application_form
+  - slot_was_set:
+    - requested_slot: contact_info
+  - intent: provide_contact_info
+    entities:
+    - contact_info: '7017048852'
+  - slot_was_set:
+    - contact_info: '7017048852'
+  - action: job_application_form
+  - slot_was_set:
+    - requested_slot: education_details
+  - intent: provide_education_details
+    entities:
+    - education_details: Bachelors of Engineering
+  - slot_was_set:
+    - education_details: Bachelors of Engineering
+  - action: job_application_form
+  - slot_was_set:
+    - requested_slot: technology
+  - intent: provide_technology
+    entities:
+    - technology: Python and Django
+  - slot_was_set:
+    - technology: Python and Django
+  - action: job_application_form
+  - slot_was_set:
+    - requested_slot: experience
+  - intent: provide_experience
+    entities:
+    - experience: I have 5 years of experience
+  - slot_was_set:
+    - experience: I have 5 years of experience
+  - action: job_application_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - intent: stop
+  - action: job_application_form
+  - active_loop: job_application_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values

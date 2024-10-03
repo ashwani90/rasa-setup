@@ -77,7 +77,7 @@ rasa run -m chat-templates/cricket/models --enable-api --cors="*" --debug --endp
 ### For real world models keep all models for a bot inside the models the bot
 
 ### Train and run CRICKET template
-
+### Not ready for use
 #### Train the model
 ```
 ## Train the model
@@ -94,6 +94,7 @@ rasa shell -m chat-templates/cricket/models --enable-api --cors="*"  --endpoints
 ```
 
 ### Train and run FINANCIAL template
+### this is alsoo not ready as has extra configuration
 #### Train the model
 ```
 rasa train --domain chat-templates/financial/domain.yml --data chat-templates/financial/data/ --out chat-templates/financial/models/
@@ -343,7 +344,7 @@ rasa shell -m chat-templates/e-learning/models --enable-api --cors="*"  --endpoi
 ```
 
 ### Train and run HIRING-TEAM template
-
+## In Working state
 #### Train the model
 ```
 rasa train --domain chat-templates/hiring-team/domain.yml --data chat-templates/hiring-team/data/ --out chat-templates/hiring-team/models/

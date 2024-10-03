@@ -7,10 +7,18 @@ entities:
 
 
 intents:
+  - job_application_form:
+      use_entities: []
   - provide_contact_info
   - provide_education_details
   - provide_technology
   - provide_experience
+  - greet
+  - job_apply
+  - stop:
+      use_entities: true
+  - affirm
+  - deny
 
 
 slots:
@@ -49,16 +57,34 @@ responses:
     - text: "Please provide your technology skills."
   utter_ask_experience:
     - text: "Please provide your experience."
+  utter_greet:
+    - text: "Hello How are you"
+  utter_job_apply_message:
+    - text: "Ok sure. Please provide your contact number"
+  utter_ask_continue:
+    - text: Do you want to continue?
+  utter_slot_values:
+    - text: "I am going to save you details"
+  utter_submit:
+    - text: All done!
+
+forms:
+  job_application_form:
+    # ignored_intents:
+    # - chitchat
+    required_slots:
+      - contact_info
+      - education_details
+      - technology
+      - experience
+
+config:
+  store_entities_as_slots: true
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-actions:
-  - action_save_contact_info
-  - action_save_education_details
-  - action_save_technology
-  - action_save_experience
-  - action_save_user_details
+
 
 
 
