@@ -6,33 +6,38 @@ stories:
 - story: Ask Course Recommendation Story
   steps:
     - intent: ask_course_recommendation
-    - action: action_ask_user_details
+      entities:
+        - content_type: 'course'
+        - technology: 'artificial intelligence'
+    - action: utter_ask_user_details
 
 - story: Ask Book Recommendation Story
   steps:
     - intent: ask_book_recommendation
       entities:
-        - order_id: '12345'
-    - action: action_ask_user_details
+        - content_category: 'fantasy'
+        - content_type: book
+    - action: utter_ask_user_details
 
 - story: Provide User Details Story
   steps:
     - intent: provide_user_details
       entities:
-        - technology: "Python"
+        - user_profile: "Python"
         - demographics: "beginner"
-    - action: action_recommend_course_or_book
+    - action: utter_recommend_course_or_book
 
 - story: Ask Course Details Story
   steps:
     - intent: ask_course_details
       entities:
-        - course_name: "Introduction to Python"
-    - action: action_course_details
+        - content_category: 'Python Programming'
+        - content_type: course
+    - action: utter_course_details
 
 - story: Ask Book Details Story
   steps:
     - intent: ask_book_details
       entities:
         - book_name: "Python for Beginners"
-    - action: action_book_details
+    - action: utter_book_details

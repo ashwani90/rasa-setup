@@ -4,6 +4,9 @@ entities:
   - demographics
   - course_name
   - book_name
+  - content_type
+  - content_category
+  - user_profile
 
 intents:
   - ask_course_recommendation
@@ -14,6 +17,16 @@ intents:
 
 
 slots:
+  content_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: content_type
+  content_category:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: content_category
   technology:
     type: text
     mappings:
@@ -34,12 +47,23 @@ slots:
     mappings:
     - type: from_entity
       entity: book_name
+  user_profile:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_profile
 
 responses:
   utter_you_are_welcome:
     - text: "You're welcome!"
   utter_ask_user_details:
     - text: "Please provide your technology of interest and your proficiency level."
+  utter_recommend_course_or_book:
+    - text: "let me recommend something to you"
+  utter_course_details:
+    - text: "let me tell you about the course"
+  utter_book_details:
+    - text: "let me tell you about the book"
 
 session_config:
   session_expiration_time: 60
