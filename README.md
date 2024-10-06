@@ -94,7 +94,7 @@ rasa shell -m chat-templates/cricket/models --enable-api --cors="*"  --endpoints
 ```
 
 ### Train and run FINANCIAL template
-### this is alsoo not ready as has extra configuration
+### this is also not ready as has extra configuration
 #### Train the model
 ```
 rasa train --domain chat-templates/financial/domain.yml --data chat-templates/financial/data/ --out chat-templates/financial/models/
@@ -113,7 +113,7 @@ rasa shell -m chat-templates/financial/models --enable-api --cors="*"  --endpoin
 ```
 
 ### Train and run HELPDESK template
-
+### This works in the current state but will use this as per our own use case
 #### Train the model
 ```
 rasa train --domain chat-templates/helpdesk/domain.yml --data chat-templates/helpdesk/data/ --out chat-templates/helpdesk/models/
@@ -132,7 +132,7 @@ rasa shell -m chat-templates/helpdesk/models --enable-api --cors="*"  --endpoint
 ```
 
 ### Train and run RETAIL template
-
+### this is working fine
 #### Train the model
 ```
 rasa train --domain chat-templates/retail/domain.yml --data chat-templates/retail/data/ --out chat-templates/retail/models/
@@ -325,7 +325,7 @@ rasa shell -m chat-templates/responseselectorbot/models --enable-api --cors="*" 
 ```
 
 ### Train and run ELEARNING template
-
+### This model works
 #### Train the model
 ```
 rasa train --domain chat-templates/e-learning/domain.yml --data chat-templates/e-learning/data/ --out chat-templates/e-learning/models/

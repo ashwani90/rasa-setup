@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.1"
 stories:
 - story: intro
   steps:
@@ -61,4 +61,4 @@ stories:
 - story: user asks for name
   steps:
   - intent: whats_your_name
-  - action: action_give_name
+  - action: utter_give_name

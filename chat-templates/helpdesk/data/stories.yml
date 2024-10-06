@@ -53,7 +53,7 @@ stories:
   - action: utter_out_of_scope
   - action: open_incident_form
   - active_loop: null
-  - action: action_open_incident
+  - action: utter_open_incident
 
 - story: incident status form interrupted
   steps:
@@ -64,7 +64,7 @@ stories:
   - action: utter_help
   - action: incident_status_form
   - active_loop: null
-  - action: action_check_incident_status
+  - action: utter_check_incident_status
 
 - story: incident status form interrupted
   steps:
@@ -75,7 +75,7 @@ stories:
   - action: utter_out_of_scope
   - action: incident_status_form
   - active_loop: null
-  - action: action_check_incident_status
+  - action: utter_check_incident_status
 
 - story: incident status form switch to open incident
   steps:
@@ -89,7 +89,7 @@ stories:
   - action: open_incident_form
   - active_loop: open_incident_form
   - active_loop: null
-  - action: action_open_incident
+  - action: utter_open_incident
 
 - story: open incident form switch to incident status form
   steps:
@@ -103,4 +103,4 @@ stories:
   - action: incident_status_form
   - active_loop: incident_status_form
   - active_loop: null
-  - action: action_check_incident_status
+  - action: utter_check_incident_status
