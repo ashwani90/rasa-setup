@@ -151,7 +151,7 @@ rasa shell -m chat-templates/retail/models --enable-api --cors="*"  --endpoints 
 ```
 
 ### Train and run RETAIL-STORE template
-
+### Already have data for this do that better
 #### Train the model
 ```
 rasa train --domain chat-templates/retail-store/domain.yml --data chat-templates/retail-store/data/ --out chat-templates/retail-store/models/
@@ -171,7 +171,7 @@ rasa shell -m chat-templates/retail-store/models --enable-api --cors="*"  --endp
 ```
 
 ### Train and run BREAKOUT template
-
+### Not much inside this just some practice can be done
 #### Train the model
 ```
 rasa train --domain chat-templates/breakoutbot/domain.yml --data chat-templates/breakoutbot/data/ --out chat-templates/breakoutbot/models/
@@ -190,7 +190,7 @@ rasa shell -m chat-templates/breakoutbot/models --enable-api --cors="*"  --endpo
 ```
 
 ### Train and run CONCERTBOT template
-
+### this is working as it should
 #### Train the model
 ```
 rasa train --domain chat-templates/concertbot/domain.yml --data chat-templates/concertbot/data/ --out chat-templates/concertbot/models/
@@ -209,7 +209,7 @@ rasa shell -m chat-templates/concertbot/models --enable-api --cors="*"  --endpoi
 ```
 
 ### Train and run E2EBOT template
-
+### this is also working as it should
 #### Train the model
 ```
 rasa train --domain chat-templates/e2ebot/domain.yml --data chat-templates/e2ebot/data/ --out chat-templates/e2ebot/models/
@@ -229,7 +229,7 @@ rasa shell -m chat-templates/e2ebot/models --enable-api --cors="*"  --endpoints 
 ```
 
 ### Train and run FORMBOT template
-
+### this is also in good state
 #### Train the model
 ```
 rasa train --domain chat-templates/formbot/domain.yml --data chat-templates/formbot/data/ --out chat-templates/formbot/models/
@@ -248,7 +248,7 @@ rasa shell -m chat-templates/formbot/models --enable-api --cors="*"  --endpoints
 ```
 
 ### Train and run KNOWLEDGEBASEBOT template
-
+### this is also in good state
 #### Train the model
 ```
 rasa train --domain chat-templates/knowledgebasebot/domain.yml --data chat-templates/knowledgebasebot/data/ --out chat-templates/knowledgebasebot/models/
@@ -267,7 +267,7 @@ rasa shell -m chat-templates/knowledgebasebot/models --enable-api --cors="*"  --
 ```
 
 ### Train and run MOODBOT template
-
+### not a very complicated bot simple one and it works fine
 #### Train the model
 ```
 rasa train --domain chat-templates/moodbot/domain.yml --data chat-templates/moodbot/data/ --out chat-templates/moodbot/models/
@@ -287,7 +287,7 @@ rasa shell -m chat-templates/moodbot/models --enable-api --cors="*"  --endpoints
 ```
 
 ### Train and run REMINDERBOT template
-
+### Cool bot works fine
 #### Train the model
 ```
 rasa train --domain chat-templates/reminderbot/domain.yml --data chat-templates/reminderbot/data/ --out chat-templates/reminderbot/models/
@@ -306,7 +306,7 @@ rasa shell -m chat-templates/reminderbot/models --enable-api --cors="*"  --endpo
 ```
 
 ### Train and run RESPONSESELECTORBOT template
-
+### Simple example bot
 #### Train the model
 ```
 rasa train --domain chat-templates/responseselectorbot/domain.yml --data chat-templates/responseselectorbot/data/ --out chat-templates/responseselectorbot/models/
@@ -382,7 +382,7 @@ rasa shell -m chat-templates/order-manage/models --enable-api --cors="*"  --endp
 ```
 
 ### Train and run RETAIL-STORE template
-
+### already working
 #### Train the model
 ```
 rasa train --domain chat-templates/retail-store/domain.yml --data chat-templates/retail-store/data/ --out chat-templates/retail-store/models/
