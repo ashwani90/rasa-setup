@@ -1,0 +1,16 @@
+version: "3.1"
+rules:
+  - rule: activate survey form
+    steps:
+      - intent: affirm
+      - action: survey_form
+      - active_loop: survey_form
+
+  - rule: submit form
+    condition:
+    - active_loop: survey_form
+    steps:
+      - action: survey_form
+      - active_loop: null
+      - action: utter_submit
+      - action: utter_slots_values
