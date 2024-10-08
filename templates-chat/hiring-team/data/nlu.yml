@@ -94,6 +94,14 @@ nlu:
     - [My career has spanned various industries, including healthcare and education](experience).
     - [I am currently freelancing and looking for new opportunities in software development](experience).
 
+- intent: provide_resume_link
+  examples: |
+    - My resume link is [https://abcd.com](resume_link).
+    - [https://abcd.com](resume_link).
+    - Here you can find my resume [https://abcd.com](resume_link).
+    - Please check this [https://abcd.com](resume_link).
+    - Here it is [https://abcd.com](resume_link).
+
 - intent: job_apply
   examples: |
     - I am looking for a job

@@ -1,0 +1,41 @@
+version: "3.1"
+
+stories:
+- story: Ask Course Recommendation Story
+  steps:
+    - intent: ask_course_recommendation
+      entities:
+        - content_type: 'course'
+        - technology: 'artificial intelligence'
+    - action: utter_ask_user_details
+
+- story: Ask Book Recommendation Story
+  steps:
+    - intent: ask_book_recommendation
+      entities:
+        - content_category: 'fantasy'
+        - content_type: book
+    - action: utter_ask_user_details
+
+- story: Provide User Details Story
+  steps:
+    - intent: provide_user_details
+      entities:
+        - user_profile: "Python"
+        - demographics: "beginner"
+    - action: utter_recommend_course_or_book
+
+- story: Ask Course Details Story
+  steps:
+    - intent: ask_course_details
+      entities:
+        - content_category: 'Python Programming'
+        - content_type: course
+    - action: utter_course_details
+
+- story: Ask Book Details Story
+  steps:
+    - intent: ask_book_details
+      entities:
+        - book_name: "Python for Beginners"
+    - action: utter_book_details
