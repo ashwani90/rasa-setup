@@ -4,6 +4,7 @@ story_graph.dot
 .rasa
 models/**/*
 chat-templates/**/models/*
+templates-chat/**/models/*
 env
 
 # Byte-compiled / optimized / DLL files
