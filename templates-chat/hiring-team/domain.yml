@@ -1,0 +1,101 @@
+version: '3.1'
+entities:
+  - contact_info
+  - education_details
+  - technology
+  - experience
+
+
+intents:
+  - job_application_form:
+      use_entities: []
+  - provide_contact_info
+  - provide_education_details
+  - provide_technology
+  - provide_experience
+  - greet
+  - job_apply
+  - stop:
+      use_entities: true
+  - affirm
+  - deny
+
+
+slots:
+  contact_info:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: contact_info
+  education_details:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: education_details
+  technology:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: technology
+  experience:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: experience
+
+
+responses:
+  utter_ask_contact_info:
+    - text: "Please provide your contact information."
+  utter_ask_education_details:
+    - text: "Please provide your education details."
+  utter_ask_technology:
+    - text: "Please provide your technology skills."
+  utter_ask_experience:
+    - text: "Please provide your experience."
+  utter_greet:
+    - text: "Hello How are you"
+  utter_job_apply_message:
+    - text: "Ok sure. Please provide your contact number"
+  utter_ask_continue:
+    - text: Do you want to continue?
+  utter_slot_values:
+    - text: "I am going to save you details"
+  utter_submit:
+    - text: All done!
+  utter_noworries:
+    - text: No Worries
+  utter_iamabot:
+    - text: "Utter I am a bot"
+  utter_chitchat:
+    - text: "Lets Chitchat"
+  utter_slots_values:
+    - text: "Let me tell you the values"
+
+forms:
+  job_application_form:
+    # ignored_intents:
+    # - chitchat
+    required_slots:
+      - contact_info
+      - education_details
+      - technology
+      - experience
+
+actions:
+- action_save_details_info
+
+config:
+  store_entities_as_slots: true
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+
+

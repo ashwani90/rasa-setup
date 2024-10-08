@@ -1,0 +1,37 @@
+version: "3.1"
+rules:
+  - rule: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Thank you
+    steps:
+      - intent: thankyou
+      - action: utter_noworries
+
+  - rule: Bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Chitchat
+    steps:
+      - intent: chitchat
+      - action: utter_chitchat
+
+  - rule: activate hiring form
+    steps:
+      - intent: job_apply
+      - action: job_application_form
+      - active_loop: job_application_form
+
+  - rule: submit form
+    condition:
+    - active_loop: job_application_form
+    steps:
+      - action: job_application_form
+      - active_loop: null
+      - action: utter_submit
+      - action: utter_slots_values
+      - action: action_save_details_info

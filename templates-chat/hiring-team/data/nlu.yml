@@ -1,0 +1,176 @@
+version: "3.1"
+nlu:
+- intent: provide_contact_info
+  examples: |
+    - My phone number is [+1 123-456-7890](contact_info).
+    - You can reach me at [555-123-4567](contact_info).
+    - Here's my email: [candidate@email.com](contact_info).
+    - I can be contacted via [candidate@email.com](contact_info).
+    - Phone: [555-987-6543](contact_info)
+    - Email: [candidate@email.com](contact_info)
+    - Contact me at [+91 9876543210](contact_info)
+    - Please use this email for communication: [candidate@email.com](contact_info)
+    - My mobile number is [987-654-3210](contact_info)
+    - You can reach me on my cell at [555-987-6543](contact_info)
+    - I'm available at [+1 (555) 123-4567](contact_info)
+    - Email me at [candidate@email.com](contact_info)
+    - Contact information: [555-123-4567](contact_info)
+    - Here is how you can contact me: [candidate@email.com](contact_info)
+    - My contact number is [+91-9876543210](contact_info)
+    - Feel free to reach out to me at [555-987-6543](contact_info)
+    - You can contact me using this number: [+1-555-123-4567](contact_info)
+    - For any questions, contact me at [candidate@email.com](contact_info)
+    - Phone number: [987-654-3210](contact_info)
+    - Please reach out to me via email: [candidate@email.com](contact_info)
+    
+
+- intent: provide_education_details
+  examples: |
+    - I have a [Bachelor's degree in Computer Science](education_details).
+    - My education background includes a [Master's in Business Administration](education_details).
+    - I studied [Electrical Engineering at XYZ University](education_details).
+    - I completed my [degree in Economics from ABC College](education_details).
+    - I have a [diploma in Graphic Design from XYZ Institute](education_details).
+    - I graduated with [honors in Mechanical Engineering](education_details).
+    - My educational [qualification is in Finance](education_details).
+    - I have a [PhD in Physics](education_details).
+    - I studied [Computer Engineering at University of XYZ](education_details).
+    - My educational background includes a [degree in Marketing](education_details).
+    - I have completed [courses in Data Science and Machine Learning](education_details).
+    - I have certifications in [Project Management](education_details).
+    - I have studied [Software Development](education_details).
+    - My education includes a [diploma in Hospitality Management](education_details).
+    - I have a [Bachelor of Arts degree in English Literature](education_details).
+    - My academic background is in [Human Resources Management](education_details).
+    - I studied [Biochemistry in my undergraduate program](education_details).
+    - I have a [degree in Civil Engineering](education_details).
+    - My education includes a [certification in Web Development](education_details).
+    - I completed a [course in Digital Marketing](education_details).
+
+- intent: provide_technology
+  examples: |
+    - I have experience with [Python and Django](technology).
+    - My tech skills include [React and Node.js](technology).
+    - I am proficient in [Java and Spring Boot](technology).
+    - I have worked with [C# and .NET framework](technology).
+    - [Python, Flask, and SQL](technology) are my specialties.
+    - I am familiar with [JavaScript and Angular](technology).
+    - My expertise lies in [PHP and Laravel](technology).
+    - I have hands-on experience with [Ruby on Rails](technology).
+    - [JavaScript, Vue.js, and MongoDB](technology) are technologies I work with.
+    - I am skilled in [iOS development using Swift and Objective-C](technology).
+    - My tech stack includes [HTML, CSS, and Bootstrap](technology).
+    - I have knowledge of [machine learning with TensorFlow and PyTorch](technology).
+    - I am proficient in [front-end development with HTML, CSS, and JavaScript](technology).
+    - My experience covers [backend development using Python, Django, and PostgreSQL](technology).
+    - I have built applications using [React Native for mobile development](technology).
+    - I am familiar with [cloud technologies such as AWS and Azure](technology).
+    - I have expertise in [DevOps tools like Docker and Kubernetes](technology).
+    - I have worked on [data analysis using R and SQL](technology).
+    - My skills include [responsive web design with CSS Grid and Flexbox](technology).
+    - I have experience with [version control using Git and GitHub](technology).
+    
+
+- intent: provide_experience
+  examples: |
+    - [I have 5 years of experience as a software engineer](experience).
+    - [I worked at ABC Company for 3 years as a project manager](experience).
+    - [My previous job was at XYZ Inc. where I was a senior developer](experience).
+    - [I have been in the IT industry for over a decade, primarily as a backend developer](experience).
+    - [As a product manager, I led a team of 10 people in delivering successful projects](experience).
+    - [I have experience in customer support, having worked at a tech startup for 2 years](experience).
+    - [In my last role, I focused on frontend development using Angular and React](experience).
+    - [I started my career as a data analyst and progressed to a data scientist role](experience).
+    - [I have freelanced as a UX/UI designer for various clients over the past 4 years](experience).
+    - [I have worked in both startup environments and large corporations](experience).
+    - [My expertise includes full-stack development with Python, Django, and JavaScript](experience).
+    - [As a business analyst, I conducted market research and developed strategies](experience).
+    - [I have experience in agile methodologies and scrum practices](experience).
+    - [I have been involved in digital marketing campaigns in my previous roles](experience).
+    - [I have worked remotely for the past 2 years as a remote developer](experience).
+    - [I have experience in database administration and SQL query optimization](experience).
+    - [My background is in financial services, with experience in fintech applications](experience).
+    - [I have worked with cross-functional teams in delivering complex projects](experience).
+    - [My career has spanned various industries, including healthcare and education](experience).
+    - [I am currently freelancing and looking for new opportunities in software development](experience).
+
+- intent: job_apply
+  examples: |
+    - I am looking for a job
+    - I want to apply for a job
+    - I want to work in this company
+
+- intent: thankyou
+  examples: |
+    - Thank You
+    - ok
+    - ok Thank you
+
+- intent: bot_challenge
+  examples: |
+    - Are you a bot
+    - Are you a robot
+    - Are you human
+
+- intent: chitchat
+  examples: |
+    - Who are you
+    - tell me something else
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: stop
+  examples: |
+    - ok then you cant help me
+    - that was shit, you're not helping
+    - you can't help me
+    - you can't help me with what i need
+    - i guess you can't help me then
+    - ok i guess you can't help me
+    - that's not what i want
+    - ok, but that doesnt help me
+    - this is leading to nothing
+    - this conversation is not really helpful
+    - you cannot help me with what I want
+    - I think you cant help me
+    - hm i don't think you can do what i want
+    - stop
+    - stop go back
+    - and you call yourself bot company? pff
+    - and that's it?
+    - nothing else?
+
+- intent: affirm
+  examples: |
+    - yeah a cheap restaurant serving international food
+    - correct
+    - ye
+    - uh yes
+    - let's do it
+    - yeah
+    - uh yes
+    - um yes
+    - yes knocking
+    - that's correct
+    - yes yes
+    - right
+    - yea
+    - yes
+    - yes right
+    - yes and i dont care
+    - right on
+    - i love that

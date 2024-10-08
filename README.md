@@ -455,3 +455,9 @@ rasa run -m chat-templates/financial-spaces/models --enable-api --cors="*" --deb
 rasa shell -m chat-templates/financial-spaces/models --enable-api --cors="*"  --endpoints endpoints.yml --credentials credentials.yml
 
 ```
+
+### Running rasa actions in a template
+```
+
+rasa run actions --actions templates-chat.hiring-team.actions
+```
