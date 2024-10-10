@@ -14,24 +14,27 @@ intents:
     - greet
     - affirm
 
-
 slots:
   user_satisfaction:
     type: float
     mappings:
-    - type: custom
+    - type: from_entity
+      entity: user_satisfaction
   product_aware:
     type: float
     mappings:
-    - type: custom
+    - type: from_entity
+      entity: product_aware
   product_user:
     type: float
     mappings:
-    - type: custom
+    - type: from_entity
+      entity: product_user
   recommendation:
     type: float
     mappings:
-    - type: custom
+    - type: from_entity
+      entity: recommendation
   product:
     type: text
     mappings:
@@ -53,41 +56,41 @@ slots:
 responses:
   utter_greet:
     - text: "Hi How are you"
-  utter_ask_product:
+  utter_ask_product_aware:
     - text: "Have you heard of Google headphones"
       buttons:
-        - payload: '/inform{{"product":"No"}}'
+        - payload: '/survey_form{{"product_aware":"No"}}'
           title: "No"
-        - payload: '/inform{{"product":"Yes"}}'
+        - payload: '/survey_form{{"product_aware":"Yes"}}'
           title: "Yes"
-  utter_ask_user:
+  utter_ask_product_user:
     - text: "Are you a user of this product?"
       buttons:
-        - payload: '/inform{{"user":"No"}}'
+        - payload: '/survey_form{{"product_user":"No"}}'
           title: "No"
-        - payload: '/inform{{"user":"Yes"}}'
+        - payload: '/survey_form{{"product_user":"Yes"}}'
           title: "Yes"
   utter_ask_user_satisfaction:
     - text: |
         On a scale from 1 (not at all satisfied) to 5 (completely satisfied),
         how satisfied are you with this product?
       buttons:
-        - payload: '/inform{{"user_satisfaction":"1"}}'
+        - payload: '/survey_form{{"user_satisfaction":"1"}}'
           title: "1 (not satisfied)"
-        - payload: '/inform{{"user_satisfaction":"2"}}'
+        - payload: '/survey_form{{"user_satisfaction":"2"}}'
           title: "2 (somewhat unsatisfied)"
-        - payload: '/inform{{"user_satisfaction":"3"}}'
+        - payload: '/survey_form{{"user_satisfaction":"3"}}'
           title: "3 (neutral)"
-        - payload: '/inform{{"user_satisfaction":"4"}}'
+        - payload: '/survey_form{{"user_satisfaction":"4"}}'
           title: "4 (somewhat satisfied)"
-        - payload: '/inform{{"user_satisfaction":"5"}}'
+        - payload: '/survey_form{{"user_satisfaction":"5"}}'
           title: "5 (very satisfied)"  
   utter_ask_recommendation:
     - text: "Will you recommend this to your friends?"
       buttons:
-        - payload: '/inform{{"recommendation":"No"}}'
+        - payload: '/survey_form{{"recommendation":"No"}}'
           title: "No"
-        - payload: '/inform{{"recommendation":"Yes"}}'
+        - payload: '/survey_form{{"recommendation":"Yes"}}'
           title: "Yes"
   utter_submit:
     - text: All done!
@@ -96,9 +99,9 @@ responses:
 forms: 
   survey_form:
     required_slots:
-      - user_satisfaction
       - product_aware
       - product_user
+      - user_satisfaction
       - recommendation
 
 session_config:
